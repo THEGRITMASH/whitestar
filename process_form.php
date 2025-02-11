@@ -1,29 +1,22 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $phone = $_POST["phone"];
-    $level = $_POST["level"];
+    $name = $_POST['name'];
+    $email = $_POST['email'];
 
-    // Admin email
+    // Send Confirmation Email to User
+    $user_subject = "Thank You for Signing Up!";
+    $user_message = "Hi $name,\n\nThank you for joining Whitestar Skating Academy!\n\nBest Regards,\nWhitestar Team";
+    mail($email, $user_subject, $user_message, "From: mashetikhumphrey@gmail.com");
+
+    // Send Notification Email to Admin
     $admin_email = "mashetikhumphrey@gmail.com";
+    $admin_subject = "New Skating Academy Signup";
+    $admin_message = "New member signup:\n\nName: $name\nEmail: $email";
+    mail($admin_email, $admin_subject, $admin_message, "From: noreply@whitestar.com");
 
-    // Send confirmation email to user
-    $subject_user = "Welcome to Whitestar Skating Academy!";
-    $message_user = "Dear $name,\n\nThank you for signing up for our skating classes! We are excited to have you on board.\n\nYour Details:\nName: $name\nEmail: $email\nPhone: $phone\nSkating Level: $level\n\nWe will get in touch with you soon!\n\nBest regards,\nWhitestar Skating Academy Team";
-    $headers_user = "From: no-reply@whitestarskating.com";
-
-    mail($email, $subject_user, $message_user, $headers_user);
-
-    // Send notification email to admin
-    $subject_admin = "New Skating Registration";
-    $message_admin = "A new student has registered:\n\nName: $name\nEmail: $email\nPhone: $phone\nSkating Level: $level";
-    $headers_admin = "From: no-reply@whitestarskating.com";
-
-    mail($admin_email, $subject_admin, $message_admin, $headers_admin);
-
-    // Redirect to a thank-you page
-    header("Location: thank-you.html");
-    exit();
+    echo "Thank you for signing up!";
+} else {
+    http_response_code(405); // Set HTTP 405 error
+    echo "Method Not Allowed";
 }
 ?>
