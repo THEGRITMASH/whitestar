@@ -11,8 +11,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #000000;
-            animation: backgroundSlide 25s infinite linear;
+            color: #0b023b;
+            animation: backgroundSlide 55s infinite linear;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -28,7 +28,7 @@
         }
 
         header {
-            background-color: rgba(0, 80, 158, 0.9);
+            background-color: rgba(230, 191, 146, 0.9);
             color: white;
             padding: 15px;
             text-align: center;
@@ -56,86 +56,40 @@
         .hero {
             text-align: center;
             padding: 50px;
-            background-color: rgba(0, 115, 230, 0.8);
+            background-color: rgba(228, 143, 154, 0.8);
             color: white;
             margin-top: 80px;
         }
-        .cta-button {
-            display: inline-block;
-            background: #ff6600;
-            color: white;
-            padding: 15px 30px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
+        .testimonials {
+    text-align: center;
+    padding: 40px;
+    background-color: #e6f2ff;
+}
 
-        .cta-button:hover {
-            background: #e65c00;
-        }
+.testimonial-slider {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
 
-        /* Countdown Timer */
-        .event {
-            text-align: center;
-            font-size: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-  /* Testimonials */
-  .testimonials {
-            text-align: center;
-            padding: 40px;
-            background-color: #e6f2ff;
-        }
+.testimonial {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
 
-        .testimonial-slider {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-        }
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
 
-        .testimonial {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
-            text-align: center;
-        }
-
-        .testimonial img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #0073e6;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 15px;
-        }
-
-        footer {
-            background-color: rgba(0, 80, 158, 0.9);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            width: 100%;
-        }
-
-       
-        
 .btn {
     display: inline-block;
     background-color: #0073e6;
@@ -149,7 +103,7 @@
         .welcome, .why-choose, .about, .programs, .benefits, .contact {
             padding: 20px;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(224, 169, 169, 0.5);
             margin: 20px;
             border-radius: 10px;
         }
@@ -182,8 +136,8 @@
         }
 
         .whatsapp img {
-            width: 20px;
-            height: 20px;
+            width: 50px;
+            height: 50px;
             margin-right: 8px;
         }
 
@@ -213,35 +167,60 @@
     </header>
     
     <section class="hero">
-        <h2>Passion in Action</h2>
-        <p>Building champions, one skate at a time.</p>
-        <a href="contact.html" class="cta-button">Join Now</a>
+        <h2></h2>
+        <p></p>
     </section>
+    
+    <section id="programs" class="programs">
+        <h2>Our Programs</h2>
+        <p>Whether you're a beginner or a competitive skater, we have a program tailored for you.</p>
+    
+        <h3>🎯 Training Levels</h3>
+        <ul>
+            <li>🔹 <strong>Beginner Program:</strong> Learn the basics of balance, movement, and control.</li>
+            <li>🔹 <strong>Intermediate Program:</strong> Improve technique, turns, and coordination.</li>
+            <li>🔹 <strong>Advanced Training:</strong> Competition-level coaching, jumps, and spins.</li>
+        </ul>
+    
+        <h3>🏅 Specialized Programs</h3>
+        <ul>
+            <li>⛸️ <strong>Figure Skating Masterclass:</strong> Perfect for artistic skaters aiming for competitions.</li>
+            <li>⚡ <strong>Speed Skating Training:</strong> Develop agility and power with sprint techniques.</li>
+            <li>🎭 <strong>Freestyle & Tricks:</strong> Master cool jumps, spins, and footwork.</li>
+            <li>💪 <strong>Skating for Fitness:</strong> Stay active and fit while enjoying the ice.</li>
+        </ul>
+    
+        <h3>📅 Schedule</h3>
+        <p><strong>Beginner Classes:</strong> Mon, Wed, Fri (4 PM - 6 PM)</p>
+        <p><strong>Advanced Training:</strong> Tue, Thu, Sat (6 PM - 8 PM)</p>
+    
+        <h3>💡 Why Train with Us?</h3>
+        <ul>
+            <li>✅ Learn from Certified Coaches</li>
+            <li>✅ Small Class Sizes for Personalized Training</li>
+            <li>✅ Improve Skating Skills, Strength, and Agility</li>
+            <li>✅ Prepare for Competitions and Shows</li>
+        </ul>
+    
+        <h3>🗣️ Testimonials</h3>
+        <p>"Whitestar Skating Academy helped me achieve my dream of becoming a professional skater!" – <strong>Emma L.</strong></p>
+    
+        <h3>🚀 Ready to Skate?</h3>
+        <p><a href="contact.html" class="btn">Enroll Now!</a></p>
+    </section>
+    
+    <h2>
+        
+    </h2>
+    <h2>
+        
+    </h2>
+    <h2>
+        
+    </h2>
+    <h2>
 
-    <!-- Countdown Timer -->
-    <div class="event">
-        <h3>Next Skating Competition</h3>
-        <p>March 10, 2025</p>
-        <p id="countdown"></p>
-    </div>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <h2>What Our Skaters Say</h2>
-        <div class="testimonial-slider">
-            <div class="testimonial">
-                <img src="images/person1.jpg" alt="Student">
-                <p>"Whitestar Skating Academy transformed my confidence and skills!"</p>
-            </div>
-            <div class="testimonial">
-                <img src="images/person2.jpg" alt="Student">
-                <p>"The best place to master figure skating. Highly recommended!"</p>
-            </div>
-            <div class="testimonial">
-                <img src="images/person3.jpg" alt="Student">
-                <p>"Coaches are amazing! I learned so much in just a few weeks."</p>
-            </div>
-        </div>
+    </h2>
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>Email: <a href="mailto:nellyklime100@gmail.com">nellyklime100@gmail.com</a></p>

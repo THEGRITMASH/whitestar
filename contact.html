@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - Whitestar Skating Academy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f2ff;
+            color: #003366;
+            text-align: center;
+        }
+        header {
+            background-color: rgba(230, 191, 146, 0.9);
+            color: rgb(216, 10, 10);
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(9, 2, 17);
+            color: rgb(233, 16, 16);
+            margin-top: 80px;
+        }
+        .cta {
+            margin: 20px;
+            font-size: 20px;
+        }
+        .cta a {
+            display: inline-block;
+            background-color: #0073e6;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .cta a:hover {
+            background-color: #005bb5;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            margin: 30px auto;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .form-container input, .form-container select, .form-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: #0073e6;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #005bb5;
+        }
+        .contact-info {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .whatsapp {
+            margin-top: 20px;
+        }
+        .whatsapp a {
+            text-decoration: none;
+            font-size: 18px;
+            color: green;
+            font-weight: bold;
+        }
+        .whatsapp img {
+            width: 30px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        footer {
+            background-color: #00509e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div>Join Our Skating Community Today! ⛸️</div>
+    <nav>
+        <ul>
+            <a href="index.html">Home                       .</a>
+            <a href="about.html">About Us                   .</a>
+            <a href="programs.html">Programs                    .</a>
+           <a href="benefits.html">Benefits                 .</a>
+           <a href="contact.html">Contact                   .</a>
+            <a href="testimonial-form.html" class="btn">Share Your Experience</a>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <p>Become part of an exciting and passionate skating family!</p>
+</section>
+
+<section class="cta">
+    <p>Join our structured training programs and experience the thrill of skating!</p>
+    <a href="#register">Register Now</a>
+</section>
+
+<section id="register" class="form-container">
+    <h2>Sign Up for Skating Classes</h2>
+    <form action="process_form.php" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="level">Skating Level:</label>
+        <select id="level" name="level" required>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+
+        <button type="submit">Join Now</button>
+    </form>
+</section>
+
+<section class="contact-info">
+    <h3>📧 Contact Us</h3>
+    <p>Email: <a href="mailto:nellyklime100@gmail.com">nellyklime100@gmail.com</a></p>
+    <p>Phone: <a href="tel:+254758028034">0758028034</a> / <a href="tel:+254758349552">0758349552</a></p>
+</section>
+
+<section class="whatsapp">
+    <h3>📲 Chat with Us on WhatsApp</h3>
+    <a href="https://wa.me/254797409945" target="_blank">
+        <img src="images/whatsapp-icon.png" alt="WhatsApp Icon"> Chat Now
+    </a>
+</section>
+
+<footer>
+    <p>&copy; 2025 Whitestar Skating Academy | Designed with passion for skating.</p>
+</footer>
+
+</body>
+</html>

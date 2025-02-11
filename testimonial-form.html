@@ -11,8 +11,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #000000;
-            animation: backgroundSlide 25s infinite linear;
+            color: #0a0a0a;
+            animation: backgroundSlide 55s infinite linear;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -27,9 +27,11 @@
             100% { background-image: url('images/skate.png'); }
         }
 
+
+        
         header {
-            background-color: rgba(0, 80, 158, 0.9);
-            color: white;
+            background-color: rgba(230, 191, 146, 0.9);
+            color: rgb(29, 4, 4);
             padding: 15px;
             text-align: center;
             position: fixed;
@@ -49,107 +51,22 @@
         }
 
         nav ul li a {
-            color: white;
+            color: rgb(20, 2, 2);
             text-decoration: none;
         }
 
         .hero {
             text-align: center;
             padding: 50px;
-            background-color: rgba(0, 115, 230, 0.8);
-            color: white;
+            background-color: rgba(9, 2, 17);
+            color: rgb(14, 1, 1);
             margin-top: 80px;
         }
-        .cta-button {
-            display: inline-block;
-            background: #ff6600;
-            color: white;
-            padding: 15px 30px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .cta-button:hover {
-            background: #e65c00;
-        }
-
-        /* Countdown Timer */
-        .event {
-            text-align: center;
-            font-size: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-  /* Testimonials */
-  .testimonials {
-            text-align: center;
-            padding: 40px;
-            background-color: #e6f2ff;
-        }
-
-        .testimonial-slider {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-        }
-
-        .testimonial {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 300px;
-            text-align: center;
-        }
-
-        .testimonial img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #0073e6;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 15px;
-        }
-
-        footer {
-            background-color: rgba(0, 80, 158, 0.9);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            width: 100%;
-        }
-
-       
-        
-.btn {
-    display: inline-block;
-    background-color: #0073e6;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 15px;
-}
 
         .welcome, .why-choose, .about, .programs, .benefits, .contact {
             padding: 20px;
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(241, 7, 7, 0.8);
             margin: 20px;
             border-radius: 10px;
         }
@@ -182,11 +99,24 @@
         }
 
         .whatsapp img {
-            width: 20px;
-            height: 20px;
+            width: 50px;
+            height: 50px;
             margin-right: 8px;
         }
-
+        .testimonial {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: center;
+        }
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
         footer {
             background-color: rgba(0, 80, 158, 0.9);
             color: white;
@@ -212,36 +142,55 @@
         </nav>
     </header>
     
-    <section class="hero">
-        <h2>Passion in Action</h2>
-        <p>Building champions, one skate at a time.</p>
-        <a href="contact.html" class="cta-button">Join Now</a>
-    </section>
-
-    <!-- Countdown Timer -->
-    <div class="event">
-        <h3>Next Skating Competition</h3>
-        <p>March 10, 2025</p>
-        <p id="countdown"></p>
-    </div>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
+    <section id="testimonials" class="testimonials">
         <h2>What Our Skaters Say</h2>
+        <p>See what our students and parents have to say about Whitestar Skating Academy.</p>
+    
         <div class="testimonial-slider">
             <div class="testimonial">
-                <img src="images/person1.jpg" alt="Student">
-                <p>"Whitestar Skating Academy transformed my confidence and skills!"</p>
+                <img src="images/emma.jpg" alt="Humphrey R.">
+                <p>🌟🌟🌟🌟🌟 "Before joining Whitestar, I could barely stand on the ice. Now, I’m competing at national events!"</p>
+                <h4>– Emma R.</h4>
             </div>
+    
             <div class="testimonial">
-                <img src="images/person2.jpg" alt="Student">
-                <p>"The best place to master figure skating. Highly recommended!"</p>
+                <img src="images/david.jpg" alt="David K.">
+                <p>🌟🌟🌟🌟🌟 "My son’s confidence has skyrocketed thanks to this academy. Highly recommend!"</p>
+                <h4>– David K.</h4>
             </div>
+    
             <div class="testimonial">
-                <img src="images/person3.jpg" alt="Student">
-                <p>"Coaches are amazing! I learned so much in just a few weeks."</p>
+                <img src="images/aisha.jpg" alt="Aisha L.">
+                <p>🌟🌟🌟🌟🌟 "The best place to learn skating, whether you're a beginner or training for competitions!"</p>
+                <h4>– Aisha L.</h4>
             </div>
         </div>
+    
+        <h3>🏆 Success Stories</h3>
+        <ul>
+            <li>🥇 <strong>Humphrey R.</strong> – Gold Medalist at National Skating Championship</li>
+            <li>🏅 <strong>Jake M.</strong> – Competed at International Figure Skating Events</li>
+            <li>🎭 <strong>Sophia T.</strong> – Featured in a professional skating show</li>
+        </ul>
+    
+        <p>Want to share your experience? We'd love to hear from you!</p>
+        <a href="testimonial-form.html" class="btn">Share Your Story</a>
+    </section>
+    
+    
+    
+    <h2>
+        
+    </h2>
+    <h2>
+        
+    </h2>
+    <h2>
+        
+    </h2>
+    <h2>
+
+    </h2>
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>Email: <a href="mailto:nellyklime100@gmail.com">nellyklime100@gmail.com</a></p>

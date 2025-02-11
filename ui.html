@@ -11,20 +11,23 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #000000;
-            animation: backgroundSlide 25s infinite linear;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            color: #003366;
         }
 
-        @keyframes backgroundSlide {
-            0%   { background-image: url('images/skate.png'); }
-            20%  { background-image: url('images/skate1.png'); }
-            40%  { background-image: url('images/skate2.png'); }
-            60%  { background-image: url('images/skate3.png'); }
-            80%  { background-image: url('images/skate4.png'); }
-            100% { background-image: url('images/skate.png'); }
+        /* Background Video */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         header {
@@ -36,11 +39,13 @@
             width: 100%;
             top: 0;
             left: 0;
+            z-index: 100;
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
         }
 
         nav ul li {
@@ -51,15 +56,21 @@
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: bold;
         }
 
+        /* Hero Section */
         .hero {
             text-align: center;
-            padding: 50px;
-            background-color: rgba(0, 115, 230, 0.8);
+            padding: 100px 20px;
             color: white;
-            margin-top: 80px;
         }
+
+        .hero h2 {
+            font-size: 40px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
         .cta-button {
             display: inline-block;
             background: #ff6600;
@@ -84,8 +95,9 @@
             border-radius: 10px;
             margin-top: 20px;
         }
-  /* Testimonials */
-  .testimonials {
+
+        /* Testimonials */
+        .testimonials {
             text-align: center;
             padding: 40px;
             background-color: #e6f2ff;
@@ -131,73 +143,24 @@
             text-align: center;
             padding: 10px;
             position: relative;
-            width: 100%;
+            width: 70%;
         }
 
-       
-        
-.btn {
-    display: inline-block;
-    background-color: #0073e6;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 15px;
-}
-
-        .welcome, .why-choose, .about, .programs, .benefits, .contact {
-            padding: 20px;
-            text-align: center;
-            background-color: rgba(255, 255, 255, 0.8);
-            margin: 20px;
-            border-radius: 10px;
-        }
-
-        .contact a {
-            color: #0073e6;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        .whatsapp {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .whatsapp a {
-            display: inline-flex;
-            align-items: center;
-            background-color: #25D366;
-            color: white;
-            padding: 20px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .whatsapp img {
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-        }
-
-        footer {
-            background-color: rgba(0, 80, 158, 0.9);
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            width: 100%;
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
+
+    <!-- Background Video -->
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="stake.mp4" type="video/mp4">
+        </video>
+    </div>
+
     <header>
         <div class="logo">Whitestar Skating Academy</div>
         <nav>
@@ -207,11 +170,10 @@
                 <li><a href="programs.html">Programs</a></li>
                 <li><a href="benefits.html">Benefits</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="testimonial-form.html" class="btn">Share Your Experience</a></li>
             </ul>
         </nav>
     </header>
-    
+
     <section class="hero">
         <h2>Passion in Action</h2>
         <p>Building champions, one skate at a time.</p>
@@ -242,21 +204,23 @@
                 <p>"Coaches are amazing! I learned so much in just a few weeks."</p>
             </div>
         </div>
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:nellyklime100@gmail.com">nellyklime100@gmail.com</a></p>
-        <p>Phone: 0758028034 / 0758349552</p>
-        
-        <!-- WhatsApp Chat Button -->
-        <div class="whatsapp">
-            <a href="https://wa.me/254797409945" target="_blank">
-                <img src="images/whatsapp-icon.png" alt="WhatsApp"> Chat with Us
-            </a>
-        </div>
     </section>
-    
+
     <footer>
         <p>&copy; 2025 Whitestar Skating Academy | Designed with passion for skating.</p>
     </footer>
+
+    <script>
+        // Countdown Timer
+        function countdown() {
+            const eventDate = new Date("March 10, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            document.getElementById("countdown").innerText = days + " days left!";
+        }
+        setInterval(countdown, 1000);
+    </script>
+
 </body>
 </html>
