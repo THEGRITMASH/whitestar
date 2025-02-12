@@ -84,6 +84,16 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+          /* Countdown Timer */
+          .event {
+            text-align: center;
+            font-size: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
   /* Testimonials */
   .testimonials {
             text-align: center;
@@ -218,12 +228,12 @@
         <a href="contact.html" class="cta-button">Join Now</a>
     </section>
 
-    <!-- Countdown Timer -->
-    <div class="event">
-        <h3>Next Skating Competition</h3>
-        <p>March 10, 2025</p>
-        <p id="countdown"></p>
-    </div>
+<!-- Countdown Timer -->
+<div class="event">
+    <h3>Next Skating Competition</h3>
+    <p>March 10, 2025</p>
+    <p id="countdown"></p>
+</div>
 
     <!-- Testimonials -->
     <section class="testimonials">
@@ -255,5 +265,17 @@
     <footer>
         <p>&copy; 2025 Whitestar Skating Academy | Designed with passion for skating.</p>
     </footer>
+    <script>
+        // Countdown Timer
+        function countdown() {
+            const eventDate = new Date("March 10, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            document.getElementById("countdown").innerText = days + " days left!";
+        }
+        setInterval(countdown, 1000);
+    </script>
+
 </body>
 </html>
